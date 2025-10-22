@@ -24,21 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const placeFixedBalloons = () => {
-        const positions = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
-        const colors = ['blue', 'red', 'yellow'];
+        // Positions: top-left, top-right, middle-left, middle-right (4 total)
+        const positions = ['top-left', 'top-right', 'middle-left', 'middle-right'];
+        const colors = ['blue', 'red', 'yellow', 'pink'];
         const container = document.getElementById('balloons-container');
         
         container.innerHTML = ''; 
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < positions.length; i++) {
             const balloon = document.createElement('img');
             const color = colors[i % colors.length];
-            const positionClass = `balloon-${positions[i]}`;
+            const positionClass = `balloon-${positions[i]}`; 
             
             balloon.src = `balloon_${color}.png`;
             balloon.alt = `${color} balloon`;
             
-            balloon.classList.add('balloon', positionClass, 'visible', 'large-balloon', 'balloon-entry'); 
+            // Uses small-balloon class for the 60px size
+            balloon.classList.add('balloon', positionClass, 'visible', 'small-balloon', 'balloon-entry'); 
             
             setTimeout(() => {
                 balloon.classList.remove('balloon-entry');
@@ -121,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             balloon.src = `balloon_${color}.png`; 
             balloon.alt = `${color} balloon`;
             
-            balloon.classList.add('multiple-balloon', 'large-balloon'); 
+            balloon.classList.add('multiple-balloon', 'small-balloon');
             balloon.style.left = `${Math.random() * 100}%`;
             balloon.style.animationDelay = `${Math.random() * 7}s`; 
             
@@ -248,8 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateButtonVisibility('stage-10-buttons', 'stage-9-buttons');
     });
-    
-    // --- FINAL BUTTON LOGIC: READY FOR SURPRISE VIDEO ---
+
     document.getElementById('stop-music-btn').addEventListener('click', () => {
         
         // 1. Stop background music and clear all animations
@@ -272,10 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // 4. Start the video fullscreen
         if (surpriseVideo) {
             surpriseVideo.play().catch(error => {
-                // Handle autoplay restriction if needed (e.g., show a play button)
+                // Handle autoplay restriction if needed
                 console.log("Autoplay prevented:", error);
             });
-            // Optional: Request fullscreen on the video element for maximum immersion
+            // Optional: Request fullscreen
             if (surpriseVideo.requestFullscreen) {
                 surpriseVideo.requestFullscreen();
             }
