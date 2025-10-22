@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Iqra! 🎈</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="greeting-screen" class="screen active black-bg">
+        <h1 id="greeting-text">Hi, IQRA<br>Kaisi hai</h1>
+    </div>
+
+    <div id="main-content-screen" class="screen black-bg">
+
+        <img id="envelope-img" src="envelope.png" alt="An envelope" class="story-image stage-2">
+        <div id="stage-2-buttons" class="button-container">
+            <button id="open-envelope-btn" class="action-btn">OPEN ENVELOPE 💌</button>
+            <p class="click-here">click here</p>
+        </div>
+
+        <img id="card-img" src="card.png" alt="A birthday card" class="story-image stage-3">
+        <div id="stage-3-buttons" class="button-container">
+            <button id="celebrate-btn" class="action-btn blue-btn">LET'S CELEBRATE THE BIRTHDAY 🥳</button>
+            <p class="click-here">click here</p>
+        </div>
+        
+        <div id="disco-light-effect"></div>
+
+        <div id="bulb-effect"></div>
+        
+        <img id="banner-img" src="banner.png" alt="Birthday banner" class="banner-top story-image">
+        <div id="balloons-container">
+            </div>
+        
+        <img id="table-img" src="table.png" alt="Cake table" class="story-image center-stage-image">
+        <img id="light-img" src="light.png" alt="Candles lit" class="story-image center-stage-image">
+        <img id="blow-img" src="blow.png" alt="Candles being blown" class="story-image center-stage-image">
+        <img id="cut-cake-img" src="iqra_cake_cut.png" alt="Iqra cutting the cake" class="story-image center-stage-image">
+        
+        <canvas id="confettiCanvas"></canvas> 
+        
+        <div id="floatingBalloons" class="hidden">
+            </div>
+
+        
+        <img id="ribbon-left-top" src="ribbon.png" alt="Ribbon" class="static-ribbon">
+        <img id="ribbon-left-bottom" src="ribbon.png" alt="Ribbon" class="static-ribbon">
+        <img id="ribbon-right-top" src="ribbon.png" alt="Ribbon" class="static-ribbon">
+        <img id="ribbon-right-bottom" src="ribbon.png" alt="Ribbon" class="static-ribbon">
+
+        <div id="stage-4-buttons" class="button-container">
+            <button id="lights-up-btn" class="action-btn">LIGHTS UP 💡</button>
+            <p class="click-here">click here</p>
+        </div>
+        
+        <div id="stage-5-buttons" class="button-container">
+            <button id="decorate-btn" class="action-btn">DECORATE ROOM 🎈</button>
+            <p class="click-here">click here</p>
+        </div>
+
+        <div id="stage-6-buttons" class="button-container">
+            <button id="open-cake-btn" class="action-btn">OPEN CAKE 🎂</button>
+            <p class="click-here">click here</p>
+        </div>
+        
+        <div id="stage-7-buttons" class="button-container">
+            <button id="light-candle-btn" class="action-btn">LIGHT UP THE CANDLE 🔥</button>
+            <p class="click-here">click here</p>
+        </div>
+
+        <div id="stage-8-buttons" class="button-container">
+            <button id="blow-candle-btn" class="action-btn">BLOW UP THE CANDLE 💨</button>
+            <p class="click-here">click here</p>
+        </div>
+
+        <div id="stage-9-buttons" class="button-container">
+            <button id="cut-cake-btn" class="action-btn">CUT THE CAKE 🔪</button>
+            <p class="click-here">click here</p>
+        </div>
+
+        <div id="stage-10-buttons" class="button-container">
+            <button id="stop-music-btn" class="action-btn blue-btn">READY FOR SURPRISE VIDEO ▶️</button>
+        </div>
+
+    </div>
+
+    <div id="video-screen" class="screen">
+        <video id="surprise-video" src="video.mp4" controls preload="auto" playsinline></video>
+    </div>
+
+    <audio id="birthday-music" src="happy_birthday.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
